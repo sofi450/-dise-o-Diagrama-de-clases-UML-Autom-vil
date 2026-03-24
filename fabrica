@@ -1,0 +1,35 @@
+package automovil;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Fabrica {
+	private List<Automovil> listaAutomoviles;
+
+	/**
+	 * Constructor de la clase Fabrica,
+	 * su funcionalidad es crear una instancia de la lista de automoviles.
+	 */
+	public Fabrica() {
+		super();
+		this.listaAutomoviles = new ArrayList();
+	}
+
+	/**
+	 * Recibe como parámetro un objeto de la clase Automovil.
+	 * Permite adicionar un nuevo objeto de la clase Automovil a la lista de automoviles.
+	 * @param automovil
+	 */
+	public void agregarAutomovil(Automovil automovil) {
+		this.listaAutomoviles.add(automovil);
+	}
+
+	/**
+	 * Muestra todos los automoviles fabricados.
+	 */
+	public void mostrarAutos() {
+		for (Automovil automovil : listaAutomoviles) {
+			System.out.println(automovil);
+		}
+	}
+}
