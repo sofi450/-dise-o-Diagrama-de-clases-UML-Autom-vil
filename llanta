@@ -1,0 +1,27 @@
+package automovil;
+
+public class Llanta {
+	// Atributo de instancia
+	private String marca;
+
+	/**
+	 * @param marca atributo local
+	 */
+	public Llanta(String marca) {
+		super();
+		this.marca = marca;
+	}
+
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	@Override
+	public String toString() {
+		return " Marca " + this.marca;
+	}
+}
