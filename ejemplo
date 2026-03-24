@@ -1,0 +1,32 @@
+package automovil;
+
+public class App {
+
+	public static void main(String[] args) {
+		// Se crea un objeto de la clase Fabrica
+		Fabrica miFabrica = new Fabrica();
+
+		// Crear un objeto de la clase Persona
+		Persona propietario1 = new Persona("sofia");
+		Persona propietario2 = new Persona("juan");
+
+		// Crear dos objetos de la clase Automovil
+		Automovil auto1 = new Automovil("Toyota", 2022, propietario1);
+		Automovil auto2 = new Automovil("Mazda", 2023, propietario2);
+
+		// Agregar llantas a cada automovil
+		auto1.agregarLlanta(new Llanta("you"));
+		auto1.agregarLlanta(new Llanta("you"));
+		auto1.agregarLlanta(new Llanta("you"));
+		auto1.agregarLlanta(new Llanta("you"));
+
+		auto2.agregarLlanta(new Llanta("GD"));
+		auto2.agregarLlanta(new Llanta("GD"));
+		auto2.agregarLlanta(new Llanta("GD"));
+		auto2.agregarLlanta(new Llanta("GD"));
+
+		miFabrica.agregarAutomovil(auto1);
+		miFabrica.agregarAutomovil(auto2);
+		miFabrica.mostrarAutos();
+	}
+}
