@@ -1,0 +1,81 @@
+package automovil;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Automovil {
+	private String marca;
+	private int modelo;
+	private Motor motor;
+	private Persona persona;
+	private List<Llanta> llantas;
+
+	/**
+	 * @param marca
+	 * @param modelo
+	 * @param persona
+	 * Composición con Motor, Agregación con Llanta
+	 */
+	public Automovil(String marca, int modelo, Persona persona) {
+		super();
+		this.marca = marca;
+		this.modelo = modelo;
+		this.persona = persona;
+		this.motor = new Motor("gasolina");
+		this.llantas = new ArrayList();
+	}
+
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	public int getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(int modelo) {
+		this.modelo = modelo;
+	}
+
+	public Motor getMotor() {
+		return motor;
+	}
+
+	public void setMotor(Motor motor) {
+		this.motor = motor;
+	}
+
+	public Persona getPersona() {
+		return persona;
+	}
+
+	public void setPersona(Persona persona) {
+		this.persona = persona;
+	}
+
+	public List<Llanta> getLlantas() {
+		return llantas;
+	}
+
+	public void setLlantas(List<Llanta> llantas) {
+		this.llantas = llantas;
+	}
+
+	/**
+	 * Recibe como parámetro un objeto de la clase Llanta y
+	 * permite adicionar la referencia al objeto a la lista de llantas del automóvil.
+	 * @param llanta
+	 */
+	public void agregarLlanta(Llanta llanta) {
+		this.llantas.add(llanta);
+	}
+
+	@Override
+	public String toString() {
+		return "Marca " + this.marca + " Modelo " + this.modelo + " Persona " + this.persona + " Motor " + this.motor + " Llantas " + this.llantas;
+	}
+}
